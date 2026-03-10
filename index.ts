@@ -8,7 +8,7 @@ const firstBucket = new aws.s3.Bucket("primeiro-bucket", {
 });
 
 
-const secondBucket = new aws.s3.Bucket("primeiro-bucket", {
+const secondBucket = new aws.s3.Bucket("segundo-bucket", {
     bucket: 'second-bucket-pos-graduacao',
     tags: {
         IAC: 'true',
