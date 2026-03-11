@@ -1,0 +1,384 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2026-03-10T23:52:21.990233211Z",
+            "magic": "ebad6f0f3764e5d1508da7ca29dcc46fe4299975bc64cf19c7e18b2b6efee2c4",
+            "version": "v3.224.0"
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+                "url": "https://api.pulumi.com",
+                "owner": "VitorH3-org",
+                "project": "rocketseat.iac",
+                "stack": "stg"
+            }
+        },
+        "metadata": {},
+        "resources": [
+            {
+                "urn": "urn:pulumi:stg::rocketseat.iac::pulumi:pulumi:Stack::rocketseat.iac-stg",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "outputs": {
+                    "ecrName": "primeiro-ecr",
+                    "ecrRepositoryUrl": "397059225258.dkr.ecr.us-east-2.amazonaws.com/primeiro-ecr",
+                    "firstBucketArn": "arn:aws:s3:::first-bucket-pos-graduacao",
+                    "firstBucketName": "first-bucket-pos-graduacao",
+                    "firstBucketRegion": "us-east-2"
+                },
+                "created": "2026-03-10T00:12:57.24405Z",
+                "modified": "2026-03-10T00:12:57.24405Z",
+                "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.225.1_typescript@5.9.3/node_modules/@pulumi/runtime/stack.ts#37,19",
+                "stackTrace": [
+                    {
+                        "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.225.1_typescript@5.9.3/node_modules/@pulumi/runtime/stack.ts#37,19"
+                    },
+                    {
+                        "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.225.1_typescript@5.9.3/node_modules/@pulumi/cmd/run/run.ts#603,38"
+                    }
+                ]
+            },
+            {
+                "urn": "urn:pulumi:stg::rocketseat.iac::pulumi:providers:aws::default_7_21_0",
+                "custom": true,
+                "id": "f77b0884-6c13-4090-b05d-db4bdf23efcb",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "__internal": {},
+                    "region": "us-east-2",
+                    "skipCredentialsValidation": "false",
+                    "skipRegionValidation": "true",
+                    "version": "7.21.0"
+                },
+                "outputs": {
+                    "region": "us-east-2",
+                    "skipCredentialsValidation": "false",
+                    "skipRegionValidation": "true",
+                    "version": "7.21.0"
+                },
+                "created": "2026-03-10T00:13:01.107997Z",
+                "modified": "2026-03-10T00:13:01.107997Z"
+            },
+            {
+                "urn": "urn:pulumi:stg::rocketseat.iac::aws:ecr/repository:Repository::primeiro-ecr",
+                "custom": true,
+                "id": "primeiro-ecr",
+                "type": "aws:ecr/repository:Repository",
+                "inputs": {
+                    "__defaults": [],
+                    "imageTagMutability": "IMMUTABLE",
+                    "name": "primeiro-ecr",
+                    "region": "us-east-2",
+                    "tags": {
+                        "IAC": "true"
+                    },
+                    "tagsAll": {
+                        "IAC": "true"
+                    }
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"delete\":1200000000000}}",
+                    "__pulumi_raw_state_delta": {
+                        "obj": {
+                            "ps": {
+                                "encryptionConfigurations": {
+                                    "arr": {
+                                        "el": {
+                                            "0": {
+                                                "obj": {}
+                                            }
+                                        }
+                                    }
+                                },
+                                "imageScanningConfiguration": {
+                                    "plu": {
+                                        "i": {
+                                            "obj": {}
+                                        }
+                                    }
+                                },
+                                "imageTagMutabilityExclusionFilters": {
+                                    "arr": {}
+                                },
+                                "tags": {
+                                    "map": {}
+                                },
+                                "tagsAll": {
+                                    "map": {}
+                                }
+                            },
+                            "renamed": {
+                                "encryptionConfigurations": "encryption_configuration",
+                                "imageTagMutabilityExclusionFilters": "image_tag_mutability_exclusion_filter"
+                            }
+                        }
+                    },
+                    "arn": "arn:aws:ecr:us-east-2:397059225258:repository/primeiro-ecr",
+                    "encryptionConfigurations": [
+                        {
+                            "encryptionType": "AES256",
+                            "kmsKey": ""
+                        }
+                    ],
+                    "forceDelete": null,
+                    "id": "primeiro-ecr",
+                    "imageScanningConfiguration": {
+                        "scanOnPush": false
+                    },
+                    "imageTagMutability": "IMMUTABLE",
+                    "imageTagMutabilityExclusionFilters": [],
+                    "name": "primeiro-ecr",
+                    "region": "us-east-2",
+                    "registryId": "397059225258",
+                    "repositoryUrl": "397059225258.dkr.ecr.us-east-2.amazonaws.com/primeiro-ecr",
+                    "tags": {
+                        "IAC": "true"
+                    },
+                    "tagsAll": {
+                        "IAC": "true"
+                    }
+                },
+                "parent": "urn:pulumi:stg::rocketseat.iac::pulumi:pulumi:Stack::rocketseat.iac-stg",
+                "provider": "urn:pulumi:stg::rocketseat.iac::pulumi:providers:aws::default_7_21_0::f77b0884-6c13-4090-b05d-db4bdf23efcb",
+                "propertyDependencies": {
+                    "imageTagMutability": [],
+                    "name": [],
+                    "tags": []
+                },
+                "created": "2026-03-10T00:13:03.0536885Z",
+                "modified": "2026-03-10T00:13:03.0536885Z",
+                "sourcePosition": "project:///index.ts#10,13",
+                "stackTrace": [
+                    {
+                        "sourcePosition": "project:///index.ts#10,13"
+                    },
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.225.1_typescript@5.9.3/node_modules/@pulumi/pulumi/vendor/ts-node@7.0.1/index.js#3009,23"
+                    },
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.225.1_typescript@5.9.3/node_modules/@pulumi/pulumi/vendor/ts-node@7.0.1/index.js#3011,12"
+                    },
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.225.1_typescript@5.9.3/node_modules/@pulumi/cmd/run/run.ts#543,33"
+                    },
+                    {
+                        "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.225.1_typescript@5.9.3/node_modules/@pulumi/runtime/stack.ts#78,28"
+                    },
+                    {
+                        "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.225.1_typescript@5.9.3/node_modules/@pulumi/resource.ts#1579,22"
+                    }
+                ]
+            },
+            {
+                "urn": "urn:pulumi:stg::rocketseat.iac::aws:s3/bucket:Bucket::primeiro-bucket",
+                "custom": true,
+                "id": "first-bucket-pos-graduacao",
+                "type": "aws:s3/bucket:Bucket",
+                "inputs": {
+                    "__defaults": [
+                        "forceDestroy"
+                    ],
+                    "bucket": "first-bucket-pos-graduacao",
+                    "forceDestroy": false,
+                    "region": "us-east-2",
+                    "tags": {
+                        "IAC": "true"
+                    },
+                    "tagsAll": {
+                        "IAC": "true"
+                    }
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1200000000000,\"delete\":3600000000000,\"read\":1200000000000,\"update\":1200000000000}}",
+                    "__pulumi_raw_state_delta": {
+                        "obj": {
+                            "ps": {
+                                "corsRules": {
+                                    "arr": {}
+                                },
+                                "grants": {
+                                    "arr": {
+                                        "el": {
+                                            "0": {
+                                                "obj": {
+                                                    "ps": {
+                                                        "permissions": {
+                                                            "arr": {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "lifecycleRules": {
+                                    "arr": {}
+                                },
+                                "logging": {
+                                    "plu": {
+                                        "i": {}
+                                    }
+                                },
+                                "objectLockConfiguration": {
+                                    "plu": {
+                                        "i": {}
+                                    }
+                                },
+                                "replicationConfiguration": {
+                                    "plu": {
+                                        "i": {}
+                                    }
+                                },
+                                "serverSideEncryptionConfiguration": {
+                                    "plu": {
+                                        "i": {
+                                            "obj": {
+                                                "ps": {
+                                                    "rule": {
+                                                        "plu": {
+                                                            "i": {
+                                                                "obj": {
+                                                                    "ps": {
+                                                                        "applyServerSideEncryptionByDefault": {
+                                                                            "plu": {
+                                                                                "i": {
+                                                                                    "obj": {}
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "tags": {
+                                    "map": {}
+                                },
+                                "tagsAll": {
+                                    "map": {}
+                                },
+                                "versioning": {
+                                    "plu": {
+                                        "i": {
+                                            "obj": {}
+                                        }
+                                    }
+                                },
+                                "website": {
+                                    "plu": {
+                                        "i": {}
+                                    }
+                                }
+                            },
+                            "renamed": {
+                                "corsRules": "cors_rule",
+                                "grants": "grant",
+                                "lifecycleRules": "lifecycle_rule"
+                            }
+                        }
+                    },
+                    "accelerationStatus": "",
+                    "acl": null,
+                    "arn": "arn:aws:s3:::first-bucket-pos-graduacao",
+                    "bucket": "first-bucket-pos-graduacao",
+                    "bucketDomainName": "first-bucket-pos-graduacao.s3.amazonaws.com",
+                    "bucketPrefix": "",
+                    "bucketRegion": "us-east-2",
+                    "bucketRegionalDomainName": "first-bucket-pos-graduacao.s3.us-east-2.amazonaws.com",
+                    "corsRules": [],
+                    "forceDestroy": false,
+                    "grants": [
+                        {
+                            "id": "3b4f1a4dae54eb7ed839df7160a83104110ecb727747ec2def1133c6aaa5ff54",
+                            "permissions": [
+                                "FULL_CONTROL"
+                            ],
+                            "type": "CanonicalUser",
+                            "uri": ""
+                        }
+                    ],
+                    "hostedZoneId": "Z2O1EMRO9K5GLX",
+                    "id": "first-bucket-pos-graduacao",
+                    "lifecycleRules": [],
+                    "logging": null,
+                    "objectLockConfiguration": null,
+                    "objectLockEnabled": false,
+                    "policy": "",
+                    "region": "us-east-2",
+                    "replicationConfiguration": null,
+                    "requestPayer": "BucketOwner",
+                    "serverSideEncryptionConfiguration": {
+                        "rule": {
+                            "applyServerSideEncryptionByDefault": {
+                                "kmsMasterKeyId": "",
+                                "sseAlgorithm": "AES256"
+                            },
+                            "bucketKeyEnabled": false
+                        }
+                    },
+                    "tags": {
+                        "IAC": "true"
+                    },
+                    "tagsAll": {
+                        "IAC": "true"
+                    },
+                    "versioning": {
+                        "enabled": false,
+                        "mfaDelete": false
+                    },
+                    "website": null,
+                    "websiteDomain": null,
+                    "websiteEndpoint": null
+                },
+                "parent": "urn:pulumi:stg::rocketseat.iac::pulumi:pulumi:Stack::rocketseat.iac-stg",
+                "provider": "urn:pulumi:stg::rocketseat.iac::pulumi:providers:aws::default_7_21_0::f77b0884-6c13-4090-b05d-db4bdf23efcb",
+                "propertyDependencies": {
+                    "bucket": [],
+                    "tags": []
+                },
+                "created": "2026-03-10T23:45:39.481910529Z",
+                "modified": "2026-03-10T23:45:39.481910529Z",
+                "sourcePosition": "project:///index.ts#3,21",
+                "stackTrace": [
+                    {
+                        "sourcePosition": "project:///index.ts#3,21"
+                    },
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.225.1_typescript@5.9.3/node_modules/@pulumi/pulumi/vendor/ts-node@7.0.1/index.js#3009,23"
+                    },
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.225.1_typescript@5.9.3/node_modules/@pulumi/pulumi/vendor/ts-node@7.0.1/index.js#3011,12"
+                    },
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.225.1_typescript@5.9.3/node_modules/@pulumi/cmd/run/run.ts#543,33"
+                    },
+                    {
+                        "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.225.1_typescript@5.9.3/node_modules/@pulumi/runtime/stack.ts#78,28"
+                    },
+                    {
+                        "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.225.1_typescript@5.9.3/node_modules/@pulumi/resource.ts#1579,22"
+                    }
+                ]
+            }
+        ]
+    }
+}
